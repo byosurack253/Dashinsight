@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dashinsight"
+version = "1.0.0"
+description = "Local DashInsight lab console for Termux and non-root Android diagnostics"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+dashinsight = "dashinsight.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["dashinsight*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
